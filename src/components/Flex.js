@@ -7,7 +7,7 @@ flex-direction:${props => props.direction || 'row'};
 align-items:${props => props.align || 'stretch'};
 justify-content:${props => props.content || 'stretch'};
 margin-bottom: ${props => props.margin};
-
+margin:${props => props.margin};
 `
 
 console.log('dad')
