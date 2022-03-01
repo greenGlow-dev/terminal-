@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
+import Title from './components/Title'
+import Flex from './components/Flex'
+import Console from './components/Console'
+import Button from './components/Button'
 
-function App() {
+
+
+
+const AddWrapper = styled.div`
+width:100%;
+min-height:100vh;
+padding:2rem;
+background:black;
+color:white
+`
+
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AddWrapper>
+      <Flex content = "center">
+        <Title color="green">
+       Console cmd 2021. GreenGlow
+        </Title>
+     </Flex>
+     <Flex direction="column" >
+     <Console/>
+    <Button  outline color='green' align="flex-end">Send</Button>
+     </Flex>
+ 
+    </AddWrapper>
+  )
 }
-
-export default App;
+export default App
